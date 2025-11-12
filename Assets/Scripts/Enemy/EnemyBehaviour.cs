@@ -18,6 +18,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             EnemyHealth -= damage;
             Debug.Log("no methflask damage");
+          //  Debug.Log("enemyHealth = " + EnemyHealth);
         }
         else
         {

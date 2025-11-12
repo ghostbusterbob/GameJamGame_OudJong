@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Enemy
   - PlayerBullet
-  - Aura
+  - Player2
+
   layers:
   - Default
   - TransparentFX
