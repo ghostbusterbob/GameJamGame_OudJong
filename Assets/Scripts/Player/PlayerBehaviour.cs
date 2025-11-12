@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed = 7f; // Movement speed
-    [SerializeField] private string horizontalAxis = "Horizontal"; // Input axis for horizontal movement
-    [SerializeField] private string verticalAxis = "Vertical"; // Input axis for vertical movement
+    public int health = 100; // Player health
+    [SerializeField] public float speed = 7f; // Movement speed
+    [SerializeField] public string horizontalAxis = "Horizontal"; // Input axis for horizontal movement
+    [SerializeField] public string verticalAxis = "Vertical"; // Input axis for vertical movement
 
     void Update()
     {
