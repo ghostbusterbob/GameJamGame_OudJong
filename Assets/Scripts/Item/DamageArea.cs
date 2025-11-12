@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DamageArea : MonoBehaviour
 {
-    [SerializeField] private int damage = 10; // Damage dealt to enemies
+    [SerializeField] private int damage = 2; // Damage dealt to enemies
     [SerializeField] private float lifetime = 2f; // Lifetime of the damaging area
 
     private void Start()
@@ -13,13 +13,19 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision detected with: " + collision.name);
         if (collision.CompareTag("Enemy"))
         {
-            // Access the EnemyBehavior script
+            Debug.Log("Enemy tag detected: " + collision.name);
             EnemyBehavior enemyBehavior = collision.GetComponent<EnemyBehavior>();
             if (enemyBehavior != null)
             {
+                Debug.Log("EnemyBehavior found, applying damage.");
                 enemyBehavior.TakeDamage(damage); // Deal damage to the enemy
+            }
+            else
+            {
+                Debug.LogWarning("EnemyBehavior component not found on: " + collision.name);
             }
         }
     }

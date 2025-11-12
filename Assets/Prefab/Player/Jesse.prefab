@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 8349693245799796181}
   - component: {fileID: 3308240973117170053}
   - component: {fileID: 7147044682588282559}
+  - component: {fileID: -7223176756027766064}
   m_Layer: 0
   m_Name: Jesse
   m_TagString: Player
@@ -395,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d11c1b98ddf449ab84f75bb8d29b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   speed: 7
   horizontalAxis: Horizontal2
   verticalAxis: Vertical2
@@ -440,3 +442,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   krukkenAttack: {fileID: -7585824998739142910, guid: 534d6739fee89ba43979fcc8fa51c2ae, type: 3}
   attackInterval: 5
+--- !u!114 &-7223176756027766064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860524710580573770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb0b3e553f029340a81029740c7854e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6020123692881099106, guid: 4402ddcb47e33954196011821b8401e5, type: 3}
+  spawnHeight: 10
+  spawnRadius: 5
+  spawnInterval: 1
