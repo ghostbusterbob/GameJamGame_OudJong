@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cebc5d5d08e814283428fd721f4c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  childSprite: {fileID: 0}
+  player: {fileID: 6121333105312071824}
+  childSprite: {fileID: 7348994674910652535}
 --- !u!1 &4860524710580573770
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,9 +284,10 @@ GameObject:
   - component: {fileID: 6304619812189009226}
   - component: {fileID: 8349693245799796181}
   - component: {fileID: 3308240973117170053}
+  - component: {fileID: 7147044682588282559}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Walter
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4860524710580573770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8878907e0365f2044bfa9cecfa32a44c, type: 3}
   m_Name: 
@@ -410,6 +411,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8888706734947591903, guid: eb2513a089050ca4c9df822ac6562f53, type: 3}
   shootInterval: 0.5
   shootPoint: {fileID: 2253474336437693367}
+  targetRange: 10
 --- !u!114 &3308240973117170053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,3 +424,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759f883adf184674a8c8e1a7ca52df5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7147044682588282559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860524710580573770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654dbc73cacfc35438694f7e4faae371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  krukkenAttack: {fileID: -7585824998739142910, guid: 534d6739fee89ba43979fcc8fa51c2ae, type: 3}
+  attackInterval: 5

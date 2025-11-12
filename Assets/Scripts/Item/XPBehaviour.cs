@@ -6,7 +6,7 @@ public class XPBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Player2"))
         {
             PlayerLevel playerLevel = collision.GetComponent<PlayerLevel>();
             if (playerLevel != null)
