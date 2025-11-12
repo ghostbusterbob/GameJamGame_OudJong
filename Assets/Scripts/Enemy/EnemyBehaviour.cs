@@ -41,7 +41,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            spawner.DespawnEnemyFromBehavior(gameObject);
+            Destroy(gameObject);
+            EnemyHealth = 0;
         }
     }
 
