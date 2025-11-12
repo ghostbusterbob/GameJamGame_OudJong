@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Button playButton;
     [SerializeField] private Button TutorialButton;
+    [SerializeField] private Transform TutTransform;
     [SerializeField] private Button exitButton;
 
     [SerializeField] private Transform tutorialTextParent;
@@ -25,7 +26,7 @@ public class MainMenuManager : MonoBehaviour
         exitButton.onClick.AddListener(QuitGame);
 
         menuInitial = MainMenuHolder.transform.position;
-        buttonInitial = TutorialButton.transform.position;
+        buttonInitial = TutTransform.transform.position;
 
     }
     
@@ -41,16 +42,16 @@ public class MainMenuManager : MonoBehaviour
             Vector3 UpTarget = menuInitial + Vector3.up * 1100f;
             MainMenuHolder.transform.position = Vector3.Lerp(MainMenuHolder.transform.position, UpTarget, 10f * Time.deltaTime);
             Vector3 LeftTarget = buttonInitial + Vector3.left * 700f;
-            TutorialButton.transform.position = Vector3.Lerp(TutorialButton.transform.position, LeftTarget, 10f * Time.deltaTime);
+            TutTransform.transform.position = Vector3.Lerp(TutTransform.transform.position, LeftTarget, 10f * Time.deltaTime);
 
-            TutorialButton.GetComponentInChildren<TextMeshProUGUI>().text = "BACK";
+            TutTransform.GetComponentInChildren<TextMeshProUGUI>().text = "BACK";
         }
         else
         {
             MainMenuHolder.transform.position = Vector3.Lerp(MainMenuHolder.transform.position, menuInitial, 10f * Time.deltaTime);
-            TutorialButton.transform.position = Vector3.Lerp(TutorialButton.transform.position, buttonInitial, 10f * Time.deltaTime);
+            TutTransform.transform.position = Vector3.Lerp(TutTransform.transform.position, buttonInitial, 10f * Time.deltaTime);
             
-            TutorialButton.GetComponentInChildren<TextMeshProUGUI>().text = "TUTORIAL";
+            TutTransform.GetComponentInChildren<TextMeshProUGUI>().text = "TUTORIAL";
         }
     }
 
@@ -65,7 +66,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void QuitGame()
     {
-        
+        Application.Quit(); 
     }
     
 }
