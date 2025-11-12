@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147044682588282559, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7248444263933414382, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Enabled
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349693245799796181, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 53499988}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393625256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8878907e0365f2044bfa9cecfa32a44c, type: 3}
   m_Name: 
@@ -307,6 +307,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 960682649327270327, guid: e567da5dd9a7310458f70c3af88d367b, type: 3}
   maxEnemies: 6
   despawnRadius: 10
+  baseHealth: 10
+  healthIncreasePerInterval: 10
+  healthIncreaseIntervalSeconds: 30
 --- !u!4 &584764173
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860524710580573770, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4860524710580573770, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: m_TagString
