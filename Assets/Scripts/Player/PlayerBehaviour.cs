@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed = 7f; // Movement speed
+    [SerializeField] private string horizontalAxis = "Horizontal"; // Input axis for horizontal movement
+    [SerializeField] private string verticalAxis = "Vertical"; // Input axis for vertical movement
 
-    // Update is called once per frame
     void Update()
     {
-        // Get input from WASD keys
-        float horizontal = Input.GetAxis("Horizontal"); // A/D or Left/Right arrow keys
-        float vertical = Input.GetAxis("Vertical");     // W/S or Up/Down arrow keys
+        // Get input from the assigned axes
+        float horizontal = Input.GetAxis(horizontalAxis);
+        float vertical = Input.GetAxis(verticalAxis);
 
         // Create a movement vector
-        Vector3 movement = new Vector3(horizontal,vertical ,0 );
+        Vector3 movement = new Vector3(horizontal, vertical, 0);
 
         // Move the GameObject
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
