@@ -181,6 +181,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6121333105312071824, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
   m_PrefabInstance: {fileID: 6767422663771215847}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &656876983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   krukkenAttack: {fileID: -7585824998739142910, guid: 534d6739fee89ba43979fcc8fa51c2ae, type: 3}
   attackInterval: 5
+=======
+>>>>>>> parent of bb91062 (updates)
 --- !u!1001 &6767422663771215847
 PrefabInstance:
   m_ObjectHideFlags: 0
