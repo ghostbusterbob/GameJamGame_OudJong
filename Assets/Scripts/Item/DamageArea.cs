@@ -15,11 +15,11 @@ public class DamageArea : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            // Deal damage to the enemy
-            EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
+            // Access the EnemyBehavior script
+            EnemyBehavior enemyBehavior = collision.GetComponent<EnemyBehavior>();
+            if (enemyBehavior != null)
             {
-                enemyHealth.TakeDamage(damage);
+                enemyBehavior.TakeDamage(damage); // Deal damage to the enemy
             }
         }
     }
