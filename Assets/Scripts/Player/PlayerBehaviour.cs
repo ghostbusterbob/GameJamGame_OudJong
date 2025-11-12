@@ -19,4 +19,32 @@ public class PlayerBehaviour : MonoBehaviour
         // Move the GameObject
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
+
+
+    void TakeDamage(int damage)
+    {
+        if (health > 0)
+        {
+            health -= damage;
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (health > 0)
+        {
+            TakeDamage(10);
+        }
+        else if (health < 0)
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
 }
