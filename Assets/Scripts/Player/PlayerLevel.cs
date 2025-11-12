@@ -33,18 +33,26 @@ public class PlayerLevel : MonoBehaviour
 
     private void ActivateRandomWeaponOrPrefab()
     {
-        // Randomly choose between weapon scripts or the aura prefab
-        int randomIndex = Random.Range(0, weaponScripts.Length + 1);
-
-        if (randomIndex < weaponScripts.Length)
+        // Filter the list to include only disabled weapon scripts
+        var inactiveWeapons = new System.Collections.Generic.List<MonoBehaviour>();
+        foreach (var weapon in weaponScripts)
         {
-            // Activate a random weapon script
-            weaponScripts[randomIndex].enabled = true;
-            Debug.Log($"Activated weapon script: {weaponScripts[randomIndex].GetType().Name}");
+            if (!weapon.enabled)
+            {
+                inactiveWeapons.Add(weapon);
+            }
+        }
+
+        if (inactiveWeapons.Count > 0)
+        {
+            // Randomly activate one of the inactive weapon scripts
+            int randomIndex = Random.Range(0, inactiveWeapons.Count);
+            inactiveWeapons[randomIndex].enabled = true;
+            Debug.Log($"Activated weapon script: {inactiveWeapons[randomIndex].GetType().Name}");
         }
         else
         {
-            // Activate the aura prefab
+            // If all weapon scripts are already active, activate the aura prefab
             if (auraPrefab != null)
             {
                 auraPrefab.SetActive(true);
