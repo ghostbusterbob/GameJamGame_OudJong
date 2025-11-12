@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hazmat_suit-removebg-preview_0: -1365564511426440217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
