@@ -6,7 +6,7 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public static int HealthMultiplier { get; private set; } = 1; // Global health multiplier
     [SerializeField] private int healthIncreaseAmount = 10; // Base health increment per interval
-    [SerializeField] private float interval = 10f; // Time interval in seconds
+    [SerializeField] private float interval = 30f; // Time interval in seconds
 
     public static event Action OnHealthMultiplierUpdated; // Event to notify enemies
 
