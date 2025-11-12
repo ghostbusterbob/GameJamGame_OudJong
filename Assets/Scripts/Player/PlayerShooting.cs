@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab; // Bullet prefab
-    [SerializeField] private float shootInterval = 0.5f; // Time between shots
+    [SerializeField] public float shootInterval = 0.5f; // Time between shots
     [SerializeField] private Transform shootPoint; // Point where bullets are spawned
     [SerializeField] private float targetRange = 10f; // Range to find enemies
 

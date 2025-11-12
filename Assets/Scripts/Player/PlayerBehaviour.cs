@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed = 7f; // Movement speed
+    [SerializeField] public int health = 100;
+    [SerializeField] public float speed = 7f; // Movement speed
 
     // Update is called once per frame
     void Update()

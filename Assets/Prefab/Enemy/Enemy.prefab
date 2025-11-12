@@ -65,7 +65,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpPrefab: {fileID: 433023149746337126, guid: 8cb60fecec05de04fb9c701fe75a0a69, type: 3}
+  EnemyHealth: 10
+  methflask: 0
 --- !u!114 &3196390542736905678
 MonoBehaviour:
   m_ObjectHideFlags: 0
