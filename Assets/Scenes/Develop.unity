@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &394613524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7348994674910652535, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+  m_PrefabInstance: {fileID: 6767422663771215847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &584764171
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,12 +165,17 @@ Transform:
   m_GameObject: {fileID: 584764171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.444004, y: 0.38969842, z: 0.041309033}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &656876981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6121333105312071824, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+  m_PrefabInstance: {fileID: 6767422663771215847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6767422663771215847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,8 +184,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1012130808519119766, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012130808519119766, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355213400435371521, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 656876981}
+    - target: {fileID: 1355213400435371521, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: childSprite
+      value: 
+      objectReference: {fileID: 394613524}
     - target: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6121333105312071824, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
