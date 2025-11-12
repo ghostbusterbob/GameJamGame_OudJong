@@ -14,17 +14,8 @@ public class EnemyBehavior : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (!methflask)
-        {
-            EnemyHealth -= damage;
-            Debug.Log("no methflask damage");
-          //  Debug.Log("enemyHealth = " + EnemyHealth);
-        }
-        else
-        {
-            EnemyHealth -= damage * 2; // Optional: adjust for methflask
-            Debug.Log("methflask damage");
-        }
+        // Apply damage, considering methflask effect
+        EnemyHealth -= methflask ? damage * 2 : damage;
 
         if (EnemyHealth <= 0)
         {
@@ -36,14 +27,6 @@ public class EnemyBehavior : MonoBehaviour
     {
         DropXP();
         spawner.DespawnEnemyFromBehavior(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            spawner.DespawnEnemyFromBehavior(gameObject);
-        }
     }
 
     private void DropXP()
