@@ -23,11 +23,6 @@ public class EnemyMovement : MonoBehaviour
 
         // Move towards the player's position
         transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-
-        // Optionally, rotate to face the player
-        /*Vector3 direction = (player.position - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        */
+        
     }
 }

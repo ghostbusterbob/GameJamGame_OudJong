@@ -72,22 +72,23 @@ public class EnemySpawner : MonoBehaviour
         Vector3 worldPosition = mainCamera.ViewportToWorldPoint(viewportPosition);
         worldPosition.z = 0;
 
-        GameObject newEnemy = GetEnemyFromPool(worldPosition);
-        activeEnemies.Add(newEnemy);
+        SpawnEnemy(worldPosition);
     }
 
-    private GameObject GetEnemyFromPool(Vector3 position)
+    public void SpawnEnemy(Vector3 position)
     {
-        if (enemyPool.Count > 0)
-        {
-            GameObject enemy = enemyPool.Dequeue();
-            enemy.transform.position = position;
-            enemy.SetActive(true);
-            return enemy;
-        }
-        return Instantiate(enemyPrefab, position, Quaternion.identity);
-    }
+        GameObject enemy = Instantiate(enemyPrefab, position, Quaternion.identity);
+        EnemyBehavior enemyBehavior = enemy.GetComponent<EnemyBehavior>();
 
+        if (enemyBehavior != null)
+        {
+            // Set the enemy's health based on the current multiplier
+            enemyBehavior.EnemyHealth = EnemyHealthManager.GetBaseHealth();
+            Debug.Log($"Spawned enemy with health: {enemyBehavior.EnemyHealth}");
+        }
+
+        activeEnemies.Add(enemy);
+    }
     private void DespawnEnemy(GameObject enemy)
     {
         if (enemy != null)
@@ -96,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
             enemyPool.Enqueue(enemy);
         }
     }
-    
+
     public void DespawnEnemyFromBehavior(GameObject enemy)
     {
         if (activeEnemies.Contains(enemy))

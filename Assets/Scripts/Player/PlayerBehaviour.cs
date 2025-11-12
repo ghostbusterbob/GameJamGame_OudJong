@@ -20,31 +20,34 @@ public class PlayerBehaviour : MonoBehaviour
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 
-
-    void TakeDamage(int damage)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (health > 0)
+        Debug.Log($"Triggered by: {collision.gameObject.name}");
+
+        if (collision.CompareTag("Enemy")) // Check if the collider is an enemy
         {
-            health -= damage;
+            TakeDamage(2); // Adjust the damage value as needed
+        }
+    }
+    
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        // Clamp health to prevent it from going below 0
+        health = Mathf.Max(health, 0);
+
+        Debug.Log($"Player took {damage} damage. Remaining health: {health}");
+
+        if (health <= 0)
+        {
+            Die();
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Die()
     {
-        if (health > 0)
-        {
-            TakeDamage(10);
-        }
-        else if (health < 0)
-        {
-            die();
-        }
-    }
-
-    void die()
-    {
+        Debug.Log("Player has died!");
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 }

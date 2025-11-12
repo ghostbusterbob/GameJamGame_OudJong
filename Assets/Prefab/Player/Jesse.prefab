@@ -471,7 +471,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.48}
   m_EdgeRadius: 0
 --- !u!114 &6304619812189009226
 MonoBehaviour:
@@ -517,6 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759f883adf184674a8c8e1a7ca52df5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponScripts: []
+  auraPrefab: {fileID: 0}
 --- !u!114 &7147044682588282559
 MonoBehaviour:
   m_ObjectHideFlags: 0

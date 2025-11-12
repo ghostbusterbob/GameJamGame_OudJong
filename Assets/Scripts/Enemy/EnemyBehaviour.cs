@@ -12,10 +12,15 @@ public class EnemyBehavior : MonoBehaviour
         spawner = FindObjectOfType<EnemySpawner>();
     }
 
+    public void IncreaseHealth(int amount)
+    {
+        EnemyHealth += amount;
+        Debug.Log($"{gameObject.name} health increased to {EnemyHealth}");
+    }
+    
     public void TakeDamage(int damage)
     {
-        // Apply damage, considering methflask effect
-        EnemyHealth -= methflask ? damage * 2 : damage;
+        EnemyHealth -= damage;
 
         if (EnemyHealth <= 0)
         {
