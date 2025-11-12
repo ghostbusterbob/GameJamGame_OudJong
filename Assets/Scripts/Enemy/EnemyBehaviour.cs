@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     private EnemySpawner spawner;
+    [SerializeField] private GameObject xpPrefab; // Reference to the XP item prefab
 
     private void Start()
     {
@@ -14,11 +15,20 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.CompareTag("PlayerBullet"))
         {
             Destroy(collision.gameObject);
+            DropXP(); // Drop XP item
             spawner.DespawnEnemyFromBehavior(gameObject);
         }
         if (collision.CompareTag("Player"))
         {
             spawner.DespawnEnemyFromBehavior(gameObject);
+        }
+    }
+
+    private void DropXP()
+    {
+        if (xpPrefab != null)
+        {
+            Instantiate(xpPrefab, transform.position, Quaternion.identity);
         }
     }
 }
