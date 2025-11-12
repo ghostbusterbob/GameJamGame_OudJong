@@ -6,10 +6,13 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private GameObject xpPrefab;
     public int EnemyHealth = 10;
     public bool methflask = false;
+    
+    PlayerUI playerUI;
 
     private void Start()
     {
         spawner = FindObjectOfType<EnemySpawner>();
+        playerUI = FindObjectOfType<PlayerUI>();
     }
 
     public void TakeDamage(int damage)
@@ -34,6 +37,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Die()
     {
         DropXP();
+        playerUI.addenemykill();
         spawner.DespawnEnemyFromBehavior(gameObject);
     }
 

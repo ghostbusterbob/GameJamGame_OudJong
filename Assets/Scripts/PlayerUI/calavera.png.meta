@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c96f711b0c53d948a737b4555dd791e
+guid: e0809965c496ee943a617c4f173b015a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1365564511426440217
-    second: hazmat_suit-removebg-preview_0
+      213: 1284078919682861982
+    second: calavera_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hazmat_suit-removebg-preview_0
+      name: calavera_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 0
-        width: 255
-        height: 324
+        x: 95
+        y: 17
+        width: 322
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e31c8adf4a8c0de0800000000000000
-      internalID: -1365564511426440217
+      spriteID: e9ba34f59f6f1d110800000000000000
+      internalID: 1284078919682861982
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      hazmat_suit-removebg-preview_0: -1365564511426440217
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
