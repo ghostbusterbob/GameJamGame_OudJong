@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
@@ -6,12 +7,15 @@ public class EnemyBehavior : MonoBehaviour
 
     [SerializeField] private GameObject xpPrefab;
 
+
     public int EnemyHealth = 10;
     public bool methflask = false;
 
+    UIManager uiManager;    
     private void Awake()
     {
         spawner = FindObjectOfType<EnemySpawner>();
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     // Called by spawner each time this enemy is (re)spawned
@@ -36,6 +40,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Die()
     {
         DropXP();
+        uiManager.AddKilled((1));;
         spawner?.DespawnEnemyFromBehavior(gameObject);
     }
 

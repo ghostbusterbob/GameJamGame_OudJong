@@ -57,7 +57,7 @@ public class PlayerLevel : MonoBehaviour
         if (inactiveWeapons.Count > 0)
         {
             // Randomly activate one of the inactive weapon scripts
-            int randomIndex = Random.Range(0, inactiveWeapons.Count);
+            int randomIndex = UnityEngine.Random.Range(0, inactiveWeapons.Count);
             inactiveWeapons[randomIndex].enabled = true;
             Debug.Log($"Activated weapon script: {inactiveWeapons[randomIndex].GetType().Name}");
         }
