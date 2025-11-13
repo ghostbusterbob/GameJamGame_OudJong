@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerLevel : MonoBehaviour
@@ -5,10 +6,20 @@ public class PlayerLevel : MonoBehaviour
     public int Level { get; private set; } = 1; // Player's current level
     private int currentXP = 0; // Current XP collected
     private int xpToNextLevel = 10; // XP required for the next level
+    
+    UIManager uiManager;    
+
+    private void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();    
+    }
 
     public void AddXP(int amount)
     {
         currentXP += amount;
+        uiManager.UpdateSlider(xpToNextLevel);
+        uiManager.AddXpToSlider(amount);
+
         Debug.Log($"XP Collected: {currentXP}/{xpToNextLevel}");
 
         if (currentXP >= xpToNextLevel)
