@@ -1606,20 +1606,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-    ac nibh vel nisl aliquam fringilla. In ut pretium risus. In nisi velit, viverra
-    nec mi nec, ornare ultricies leo. Quisque sed bibendum eros. Phasellus hendrerit
-    venenatis magna, sed commodo tellus tincidunt nec. Aliquam erat volutpat. Vivamus
-    maximus consectetur suscipit. Suspendisse viverra pretium enim, id sagittis orci
-    porttitor quis.
+  m_text: '1. WASD TO MOVE
 
-    
+    2. KILL TO COLLECT METH
 
-    Phasellus eu aliquam tortor. Nam eget purus porta,
-    porttitor turpis a, tincidunt diam. Etiam ut leo nec augue rutrum cursus. Sed
-    sem urna, vestibulum non nibh a, dignissim rutrum felis. Aliquam id lectus ac
-    quam laoreet convallis. Sed non ipsum semper, pretium lorem at, dignissim ipsum.
-    Praesent a erat nisl. '
+    3. UPGRADE OVER TIME'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1646,14 +1637,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
-  m_fontSizeBase: 36
+  m_fontSize: 52.88
+  m_fontSizeBase: 52.88
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1684,7 +1675,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -208.3938, y: 0, z: -221.9845, w: -354.38196}
+  m_margin: {x: -284.39713, y: 0, z: -323.94, w: -354.38196}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
