@@ -675,6 +675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8139417484933941399, guid: e7cc9afe21688ee4b82c98130f421445, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8380801238424123424, guid: e7cc9afe21688ee4b82c98130f421445, type: 3}
       propertyPath: killtxt
       value: 

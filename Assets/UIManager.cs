@@ -19,11 +19,19 @@ public class UIManager : MonoBehaviour
         slider.maxValue = value;
     }
 
+    public void ResetSlider()
+    {
+        slider.value = 0; 
+        UpdateSlider(0);
+    }
+
     public void AddKilled(int val)
     {
         killed += val;  
         killtxt.text = ": " + killed.ToString();    
     }
+    
+    
     
     
 }

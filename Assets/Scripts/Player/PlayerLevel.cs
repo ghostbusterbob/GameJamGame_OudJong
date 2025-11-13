@@ -38,7 +38,7 @@ public class PlayerLevel : MonoBehaviour
         currentXP -= xpToNextLevel; // Carry over extra XP
         xpToNextLevel += Mathf.CeilToInt(xpToNextLevel * 0.5f); // Increase XP requirement by 50%
         Debug.Log($"Player leveled up! Current Level: {Level}, XP to next level: {xpToNextLevel}");
-
+        uiManager.UpdateSlider(xpToNextLevel);
         ActivateRandomWeaponOrPrefab();
     }
 
