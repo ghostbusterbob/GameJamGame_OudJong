@@ -155,6 +155,10 @@ PrefabInstance:
       propertyPath: 'weaponScripts.Array.data[4]'
       value: 
       objectReference: {fileID: 393625276}
+    - target: {fileID: 4405161973353623382, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Name
       value: Walter
@@ -222,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 8349693245799796181, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821903001749320903, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -429,6 +437,10 @@ PrefabInstance:
     - target: {fileID: 1376636400923006433, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816053318048486998, guid: 1b8163995417879409700703ba95bff6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3308240973117170053, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: auraPrefab

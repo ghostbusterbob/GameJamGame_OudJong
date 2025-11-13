@@ -26,7 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (collision.CompareTag("Enemy")) // Check if the collider is an enemy
         {
-            TakeDamage(2); // Adjust the damage value as needed
+            TakeDamage(5); // Adjust the damage value as needed
         }
     }
     
