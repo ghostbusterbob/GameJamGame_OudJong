@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 1665404312}
     - target: {fileID: 3308240973117170053, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: weaponScripts.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3308240973117170053, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: 'weaponScripts.Array.data[0]'
@@ -146,7 +146,11 @@ PrefabInstance:
     - target: {fileID: 3308240973117170053, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: 'weaponScripts.Array.data[2]'
       value: 
-      objectReference: {fileID: 393625265}
+      objectReference: {fileID: 393625270}
+    - target: {fileID: 3308240973117170053, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      propertyPath: 'weaponScripts.Array.data[3]'
+      value: 
+      objectReference: {fileID: 393625276}
     - target: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       propertyPath: m_Name
       value: Walter
@@ -222,6 +226,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
       insertIndex: -1
       addedObject: {fileID: 393625264}
+    - targetCorrespondingSourceObject: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393625270}
+    - targetCorrespondingSourceObject: {fileID: 4860524710580573770, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393625276}
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
 --- !u!1 &151115463 stripped
 GameObject:
@@ -275,6 +285,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8878907e0365f2044bfa9cecfa32a44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &393625269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6121333105312071824, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
+  m_PrefabInstance: {fileID: 53499988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &393625270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393625256}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40c707a5f5e84242be11a97a695ae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frisbeePrefab: {fileID: 2201979252746727553, guid: dcb9b307d45a57b488b3a733d622c47d, type: 3}
+  respawnDelay: 5
+--- !u!114 &393625276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393625256}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a947d5cc1fd22ae4b97f49833b2b38c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  losPollosHermanosPrefab: {fileID: 5784595489985828691, guid: 74c4aabc9041b8e49add2507c567b191, type: 3}
+  spawnPoint: {fileID: 393625269}
+  xpPrefab: {fileID: 433023149746337126, guid: 8cb60fecec05de04fb9c701fe75a0a69, type: 3}
+  activeDuration: 0.5
+  cooldownDuration: 5
 --- !u!1 &584764171
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +381,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7223176756027766064, guid: 1b8163995417879409700703ba95bff6, type: 3}
   m_PrefabInstance: {fileID: 995655707}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1628127681}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bb0b3e553f029340a81029740c7854e, type: 3}
@@ -346,7 +392,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7147044682588282559, guid: 1b8163995417879409700703ba95bff6, type: 3}
   m_PrefabInstance: {fileID: 995655707}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1628127681}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 654dbc73cacfc35438694f7e4faae371, type: 3}
@@ -374,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 151115463}
     - target: {fileID: 3308240973117170053, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: weaponScripts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3308240973117170053, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: 'weaponScripts.Array.data[0]'
@@ -384,6 +430,10 @@ PrefabInstance:
       propertyPath: 'weaponScripts.Array.data[1]'
       value: 
       objectReference: {fileID: 862139628}
+    - target: {fileID: 3308240973117170053, guid: 1b8163995417879409700703ba95bff6, type: 3}
+      propertyPath: 'weaponScripts.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1628127682}
     - target: {fileID: 4860524710580573770, guid: 1b8163995417879409700703ba95bff6, type: 3}
       propertyPath: m_Name
       value: Jesse
@@ -452,8 +502,30 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2652379424817736502, guid: 1b8163995417879409700703ba95bff6, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4860524710580573770, guid: 1b8163995417879409700703ba95bff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628127682}
   m_SourcePrefab: {fileID: 100100000, guid: 1b8163995417879409700703ba95bff6, type: 3}
+--- !u!1 &1628127681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4860524710580573770, guid: 1b8163995417879409700703ba95bff6, type: 3}
+  m_PrefabInstance: {fileID: 995655707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1628127682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628127681}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40c707a5f5e84242be11a97a695ae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frisbeePrefab: {fileID: 2201979252746727553, guid: dcb9b307d45a57b488b3a733d622c47d, type: 3}
+  respawnDelay: 5
 --- !u!1 &1665404312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6330697270788233779, guid: 2cfd82e91a2ce4d4fb802c94f85da340, type: 3}
